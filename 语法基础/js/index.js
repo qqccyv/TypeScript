@@ -3,6 +3,7 @@ var uname = 'dengyu';
 //定义数组的几种方式
 // var arr:number[] = [1,2,3]
 // var arr:Array<number> = [1,2,3]
+var arr1 = [];
 //元组类型tuple
 var arr = ['1', 2];
 //枚举类型enum

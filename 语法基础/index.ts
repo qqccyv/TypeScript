@@ -3,7 +3,7 @@ var uname:string = 'dengyu'
 //定义数组的几种方式
 // var arr:number[] = [1,2,3]
 // var arr:Array<number> = [1,2,3]
-
+var arr1:any[] = []
 //元组类型tuple
 let arr:[string,number] = ['1',2]
 
