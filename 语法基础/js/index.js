@@ -5,7 +5,7 @@ var uname = 'dengyu';
 // var arr:Array<number> = [1,2,3]
 var arr1 = [];
 //元组类型tuple
-var arr = ['1', 2];
+let arr = ['1', 2];
 //枚举类型enum
 var flag;
 (function (flag) {
@@ -13,8 +13,8 @@ var flag;
     flag[flag["false"] = 2] = "false";
     flag[flag["red"] = 3] = "red";
 })(flag || (flag = {}));
-var a = flag.true;
-var b = flag.red;
+let a = flag.true;
+let b = flag.red;
 console.log(a); //1
 console.log(b); //3 没有赋值下标的情况下，下标在前面一位加1
 //任意类型 ， 无法确定类型时
@@ -39,6 +39,6 @@ function run1() {
 }
 run1();
 //never类型  包括null和undefined和其他不会出现的值
-var e = (function () {
+let e = (() => {
     throw new Error('错误');
 })();

@@ -1,2 +1,2 @@
-let t:boolean = new Boolean(1)
+let t: boolean = true
 console.log(t);
