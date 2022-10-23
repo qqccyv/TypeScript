@@ -1,0 +1,8 @@
+{
+  "name": "TypeScript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:qqccyv/TypeScript.git",
+  "author": "qqccyv <313187515@qq.com>",
+  "license": "MIT"
+}
