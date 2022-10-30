@@ -21,7 +21,7 @@ onCallback(isEven);
 
 type callOrConstructor = {
   // 构造签名
-  new (date: string): Date;
+  new(date: string): Date;
   // 调用签名
   (n: number): number;
 };
@@ -29,4 +29,20 @@ type callOrConstructor = {
 function callFunction(call: callOrConstructor) {
   new call("2022-10-23");
   call(Date.now());
+}
+
+// class MyClass {
+//   static a = 1
+//   print(){
+//     MyClass.a
+//   }
+// }
+
+class MyClass {
+  private static count = 1
+
+  static setCount() {
+    MyClass.count = MyClass.count + 1
+  }
+
 }
