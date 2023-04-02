@@ -6,11 +6,17 @@ const classDecorator: ClassDecorator = (target) => {
   }
 }
 // 方法装饰器
-const methodDecorator: MethodDecorator = (target, key, descriptor: PropertyDescriptor) => {
-  descriptor.value = () => {
-    console.log('test2');
+const methodDecorator: MethodDecorator = (target, propertyKey, descriptor: PropertyDescriptor) => {
+  // descriptor.value = () => {
+  //   console.log('test2');
 
+  // }
+  const method = descriptor.value
+  descriptor.value = () => {
+    method()
   }
+  // console.log(args);
+
 }
 
 // 属性装饰器
@@ -25,12 +31,10 @@ const paramsDecorator: ParameterDecorator = (target: Object, propertyKey: string
 
 }
 
-@classDecorator
 class Test {
-  @propertyDecorator
   name = '123'
   @methodDecorator
-  public test(a: string, @paramsDecorator b: string) {
+  public test() {
     console.log('test');
 
   }
@@ -38,7 +42,6 @@ class Test {
 
 const testClass = new Test()
 
-console.log((<any>testClass).sing());
-console.log((<any>testClass).test());
+  ; (<any>testClass).test()
 
 
